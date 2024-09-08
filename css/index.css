@@ -1,28 +1,3 @@
-.press-start-2p-regular {
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-.tiny5-regular {
-    font-family: "Tiny5", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.jersey-10-regular {
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.jersey-20-regular {
-    font-family: "Jersey 20", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.jersey-25-regular {
-    font-family: "Jersey 25", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
 .silkscreen-regular {
     font-family: "Silkscreen", sans-serif;
     font-weight: 400;
@@ -47,16 +22,25 @@
     animation: typing-step2 1s steps(10, end) forwards,
     blink .8s infinite;
 }
+
 @keyframes typing-step1 {
     from {
-        width: 0 }
-    to { width: 50% }
+        width: 0
     }
+    to {
+        width: 50%
+    }
+}
+
 @keyframes typing-step2 {
     from {
-        width: 50% }
-    to { width: 100% }
+        width: 50%
+    }
+    to {
+        width: 100%
+    }
 }
+
 @keyframes blink {
     from {
         border-color: transparent
@@ -65,127 +49,60 @@
         border-color: #00f613;
     }
 }
-body, h1, h2, h3, h4, h5, h6, p, a, div, button, sec {
+
+a, div, sec {
     font-family: 'Silkscreen', "Indie Flower", sans-serif;
     color: #00f613;
 }
+
 p {
     margin: 0;
     padding: 10px;
 }
 
-/*
-nav {
-    background-color: chartreuse;
+.myname {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-main {
-    background-color: #ff0026;
-
+.image-container {
+    position: relative; /* Make sure the container is relative */
+    width: 100%; /* Ensure it takes the full width of its parent */
+    height: 300px; /* Set a height (adjust as necessary) */
+    overflow: hidden; /* Hide any overflow */
 }
 
-header {
-    text-align: center;
-    padding: 10px;
-    background-color: #0048ff;
-
-}
-
-h1 {
-    display: inline;
-    font-weight: 900;
-    font-size: 400%;
-    background-color: #ffdd00;
-
-}
-
-h2 {
-    background-color: #ff00fb;
-    color: #00f613;
-
-}
-
-h3 {
-    background-color: rgb(232, 173, 207);
-}
-
-p {
-    background-color: #d7faf5;
-    overflow: hidden;
-    border-right: .15em solid #00f613;
-    white-space: nowrap;
-    font-size: 1.6rem;
-    width: 0;
-    animation: typing 1s steps(50, end) forwards,
-    blink .8s infinite;
-
-}
-
-sec {
-    background-color: #ff9100;
-
-}
-
-div {
-    background-color: #838383;
-
-}
-
-ul {
-    background-color: #00ff80;
-
-}
-
-li {
-    background-color: #0095ff;
-
-}
-
-a {
-    background-color: #ff0062;
-
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.button--primary {
-    background-color: blue;
-    color: white;
-}
-
-.button--large {
-    font-size: 1.5em;
-}
-
-.button__icon {
-    margin-right: 5px;
-}
-
-.button__text {
-    font-weight: bold;
-}
-
-img {
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 10px;
-    width: 200px;
-    height: auto;
-    background-color: #7300ff;
-
+.image-container img {
+    position: absolute; /* Stack images on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make images fill the container */
+    height: 100%; /* Make images fill the container */
+    object-fit: cover; /* Ensure images cover the container properly */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
 }
 
 footer {
-    background-color: #346c52;
-
+    background-color: #212529; /* Dark background */
+    color: #f8f9fa; /* Light text color */
 }
-*/
+
+footer a {
+    color: #f8f9fa; /* Light text color for links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+footer .container {
+    padding: 0 15px; /* Adjust padding as needed */
+}
+
+footer h2 {
+    margin-top: 0;
+}
 
 
 

@@ -1,3 +1,17 @@
 .JPG filter=lfs diff=lfs merge=lfs -text
 images/IMG_9570.JPG filter=lfs diff=lfs merge=lfs -text
 audio/feels.band.m4a filter=lfs diff=lfs merge=lfs -text
+images/kids-gee5058cd0_1280.png filter=lfs diff=lfs merge=lfs -text
+images/t-equality-logo.png filter=lfs diff=lfs merge=lfs -text
+images/snake-logo.png filter=lfs diff=lfs merge=lfs -text
+images/snacky-logo.png filter=lfs diff=lfs merge=lfs -text
+images/imagimonhome.png filter=lfs diff=lfs merge=lfs -text
+images/imagimonfight.png filter=lfs diff=lfs merge=lfs -text
+images/snake-spiel.png filter=lfs diff=lfs merge=lfs -text
+images/SnakyGreen.png filter=lfs diff=lfs merge=lfs -text
+images/Imagimon-Logo.png filter=lfs diff=lfs merge=lfs -text
+images/imagimon-home.png filter=lfs diff=lfs merge=lfs -text
+images/Soda.png filter=lfs diff=lfs merge=lfs -text
+images/Pet1.png filter=lfs diff=lfs merge=lfs -text
+images/Pet2.png filter=lfs diff=lfs merge=lfs -text
+images/Pet3.png filter=lfs diff=lfs merge=lfs -text
