@@ -1,3 +1,16 @@
+/* By default, hide the D-pad controls */
+#mobile-controls {
+    display: none;
+}
+
+/* Show the controls only on small screens (less than 768px wide) */
+@media only screen and (max-width: 767px) {
+    #mobile-controls {
+        display: flex; /* Show the controls on small screens */
+    }
+}
+
+
 .silkscreen-regular {
     font-family: "Silkscreen", sans-serif;
     font-weight: 400;
@@ -59,6 +72,36 @@
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+}
+
+#gameCanvas {
+    display: block;
+    margin: 0 auto;
+}
+
+#restartButton {
+    display: block;
+    margin: 20px auto; /* Adds space between the button and the canvas */
+}
+
+.d-pad {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.d-pad-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.d-pad button {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
 }
 
 canvas {
