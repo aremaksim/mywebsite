@@ -4,28 +4,53 @@ const ctx = canvas.getContext("2d");
 const gridSize = 20;
 const tileCount = canvas.width / gridSize;
 
-let snake = [{ x: 10, y: 10 }];
-let direction = { x: 0, y: 0 };
-let apple = { x: Math.floor(Math.random() * tileCount), y: Math.floor(Math.random() * tileCount) };
-let score = 0;
-let gameOver = false;
+let snake, direction, apple, score, gameOver;
+
+function initializeGame() {
+    snake = [{ x: 10, y: 10 }];
+    direction = { x: 0, y: 0 };
+    apple = { x: Math.floor(Math.random() * tileCount), y: Math.floor(Math.random() * tileCount) };
+    score = 0;
+    gameOver = false;
+}
+
+initializeGame();
 
 // Handle user input
 document.addEventListener("keydown", (e) => {
     switch (e.code) {
         case "ArrowUp":
+            e.preventDefault(); // Prevent the default scrolling behavior
             if (direction.y === 0) direction = { x: 0, y: -1 };
             break;
         case "ArrowDown":
+            e.preventDefault(); // Prevent the default scrolling behavior
             if (direction.y === 0) direction = { x: 0, y: 1 };
             break;
         case "ArrowLeft":
+            e.preventDefault(); // Prevent the default scrolling behavior
             if (direction.x === 0) direction = { x: -1, y: 0 };
             break;
         case "ArrowRight":
+            e.preventDefault(); // Prevent the default scrolling behavior
             if (direction.x === 0) direction = { x: 1, y: 0 };
             break;
     }
+});
+
+
+// Event listeners for on-screen D-Pad controls
+document.getElementById("up").addEventListener("click", () => {
+    if (direction.y === 0) direction = { x: 0, y: -1 };
+});
+document.getElementById("down").addEventListener("click", () => {
+    if (direction.y === 0) direction = { x: 0, y: 1 };
+});
+document.getElementById("left").addEventListener("click", () => {
+    if (direction.x === 0) direction = { x: -1, y: 0 };
+});
+document.getElementById("right").addEventListener("click", () => {
+    if (direction.x === 0) direction = { x: 1, y: 0 };
 });
 
 // Update game state
@@ -87,6 +112,12 @@ function gameLoop() {
         setTimeout(gameLoop, 100); // Update game every 100ms
     }
 }
+
+// Restart game when button is clicked
+document.getElementById("restartButton").addEventListener("click", () => {
+    initializeGame();
+    gameLoop(); // Restart the game loop
+});
 
 // Start the game
 gameLoop();
